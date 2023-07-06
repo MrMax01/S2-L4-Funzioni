@@ -11,7 +11,7 @@ REGOLE
 /* SCRIVI QUI LA TUA RISPOSTA */
 const area = (l1, l2) => {
   if (typeof l1 !== "number" || typeof l2 !== "number") return console.log("Quello che hai passato non sono numeri!");
-  return l1 * l2;
+  else return l1 * l2;
 };
 console.log(area(4, 3));
 
