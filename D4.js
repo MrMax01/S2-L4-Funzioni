@@ -10,10 +10,10 @@ REGOLE
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 const area = (l1, l2) => {
-  if (typeof l1 !== "number" || typeof l2 !== "number") return console.log("Quello che hai passato non sono numeri!");
+  if (isNaN(l1) || isNaN(l2)) return "Quello che hai passato non sono numeri!";
   else return l1 * l2;
 };
-console.log(area(4, 3));
+console.log(area(2, 3));
 
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
@@ -56,12 +56,8 @@ console.log(crazyDiff(-1));
 const boundary = (n) => {
   if (!Number.isInteger(n)) {
     return "ERRORE!, il numero passato non è un intero!";
-  } else if (n >= 20 && n <= 100) {
-    return true;
-  } else if (n === 400) {
-    return true;
   } else {
-    return false;
+    return (n >= 20 && n <= 100) || n === 400;
   }
 };
 console.log(boundary(3));
